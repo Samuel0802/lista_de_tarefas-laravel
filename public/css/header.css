@@ -1,0 +1,19 @@
+.top-bar {
+    background-color: #000; /* Cor preta */
+    height: 100px; /* Altura desejada da barra */
+    width: 100%; /* Largura total */
+    position: fixed; /* Fixa a barra no topo da janela */
+    top: 0; /* Alinha a barra ao topo */
+    left: 0;
+    z-index: 1000; 
+    
+}
+
+.content{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    
+}

@@ -20,11 +20,14 @@ class TarefasController extends Controller
         return redirect()->route('home'); //se criação for com sucesso joga pra tela home
     }
 
+    //função para conta as tarefas
+
     $itens = TarefasSistema::pluck('tarefas', 'id'); //pluck() = do Eloquent ORM para consultar a tabela 
    //specifica a coluna da qual queremos extrair os valores para compor o array resultante.
   //O segundo argumento 'id' especifica a coluna que será usada como chave para o array resultante.
 
   $totalTarefa = $this->countTarefas();
+//fim da função para conta
 
     return view('pages.tarefas', compact('itens','totalTarefa'));//renderizar nomes e contagem de tarefas
  }
@@ -36,13 +39,10 @@ class TarefasController extends Controller
     return  $find;  
  }
 
- public function deleteTarefas(Request $request)
- {
-     $id = $request->id;
-     $buscaRegistro = TarefasSistema::find($id);
-     $buscaRegistro->delete();
-
-     return redirect()->route('home');;
+ public function destroy($id){
+  
+    TarefasSistema::where('id', $id)->delete(); 
+    return redirect()->route('home');
  }
 
 

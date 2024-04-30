@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\formRequestTarefas;
 use App\Models\TarefasSistema;
+use Database\Seeders\Tarefas;
 use Illuminate\Http\Request;
 
 class TarefasController extends Controller
@@ -37,6 +38,14 @@ class TarefasController extends Controller
     $find = TarefasSistema::all()->count(); //Vai realizar a contagem de todos os clientes
 
     return  $find;  
+ }
+
+ public function update(Request $request, $id){
+    $data = [
+        'tarefas' => $request->tarefas,
+    ];
+    TarefasSistema::where('id', $id)->update(); 
+    return redirect()->route('home');
  }
 
  public function destroy($id){

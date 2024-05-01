@@ -40,13 +40,13 @@ class TarefasController extends Controller
     return  $find;  
  }
 
- public function update(Request $request, $id){
-    $data = [
-        'tarefas' => $request->tarefas,
-    ];
-    TarefasSistema::where('id', $id)->update(); 
-    return redirect()->route('home');
- }
+//  public function update(Request $request, $id){
+//     $data = [
+//         'tarefas' => $request->tarefas,
+//     ];
+//     TarefasSistema::where('id', $id)->update(); 
+//     return redirect()->route('home');
+//  }
 
  public function destroy($id){
   

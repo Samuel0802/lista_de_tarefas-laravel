@@ -21,14 +21,14 @@
         <!-- Compiled and minified icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>toDo - List</title>
+    <title>Lista De Tarefas</title>
 </head>
 
 <body style="background-color: #333333">
     <div class="container">
 
       <div class="top-bar" align="center">
-       <img src="js/Logo.png">
+       <h3 style="color: #5E60CE;"><b>Lista De Tarefas</b></h3>
       </div>
 
       @include('componentes.pesquisarTarefa')

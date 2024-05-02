@@ -9,7 +9,6 @@ Route::prefix('home')->group(function(){
     Route::post('/', [TarefasController::class, 'cadastrarTarefas'])->name('home');
    Route::delete('/{id}', [TarefasController::class, 'destroy'])->where('id', '[0-9]+')->name('home-destroy');
 
-
 });
 
 

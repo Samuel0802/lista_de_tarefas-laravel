@@ -48,10 +48,10 @@ class TarefasController extends Controller
 //     return redirect()->route('home');
 //  }
 
- public function destroy($id){
+ public function destroy($id){// função de delete
   
     TarefasSistema::where('id', $id)->delete(); 
-    return redirect()->route('home');
+    return redirect()->route('home'); 
  }
 
 
